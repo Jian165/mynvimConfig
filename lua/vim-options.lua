@@ -1,5 +1,4 @@
 --Vim setups
-vim.opt.guifont = "JetBrainsMono Nerd Font:h14"
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
@@ -39,3 +38,6 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
+vim.opt.guifont = "JetBrainsMono Nerd Font:h14"
+
+print("vim Opts loaded")

@@ -35,14 +35,20 @@ return {
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			local lspconfig = require("lspconfig")
-			lspconfig.lua_ls.setup({})
 
-			lspconfig.omnisharp.setup({
-				cmd = { "omnisharp" },
-				enable_roslyn_analyzers = true,
-				enable_import_completion = true,
-				organize_imports_on_format = true,
-			})
+			lspconfig.lua_ls.setup({
+                capabilities = capabilities
+            })
+
+			lspconfig.bashls.setup({
+                capabilities = capabilities
+            })
+
+            vim.lsp.enable('omnisharp')
+
+            lspconfig.omnisharp.setup({
+                capabilities = capabilities,
+            })
 
 			lspconfig.jdtls.setup({
 				capabilities = capabilities,
