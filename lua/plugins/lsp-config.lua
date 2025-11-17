@@ -31,33 +31,6 @@ return {
 	-- LSP Configuration
 	"neovim/nvim-lspconfig",
 
-	config = function()
-		local capabilities = require("cmp_nvim_lsp").default_capabilities()
-        --
-		-- Use the new API instead of require("lspconfig")
-		local lsp = vim.lsp.config
-
-		-- Common LSP servers
-		lsp.lua_ls.setup({
-			capabilities = capabilities,
-		})
-
-		lsp.bashls.setup({
-			capabilities = capabilities,
-		})
-
-		lsp.omnisharp.setup({
-			capabilities = capabilities,
-		})
-
-		lsp.jdtls.setup({
-			capabilities = capabilities,
-		})
-
-		lsp.pyright.setup({
-			capabilities = capabilities,
-		})
-
 		lsp.sqlls.setup({
 			capabilities = capabilities,
 		})
