@@ -34,38 +34,31 @@ return {
 
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
-			local lspconfig = require("lspconfig")
 
-			lspconfig.lua_ls.setup({
+			vim.lsp.configs.lua_ls.setup({
                 capabilities = capabilities
             })
 
-			lspconfig.bashls.setup({
+			vim.lsp.configs.bashls.setup({
                 capabilities = capabilities
             })
 
-            vim.lsp.enable('omnisharp')
-
-            lspconfig.omnisharp.setup({
-                capabilities = capabilities,
-            })
-
-			lspconfig.jdtls.setup({
+			vim.lsp.configs.jdtls.setup({
 				capabilities = capabilities,
 			})
-			lspconfig.pyright.setup({
+			vim.lsp.configs.pyright.setup({
 				capabilities = capabilities,
 			})
-			lspconfig.sqlls.setup({
+			vim.lsp.configs.sqlls.setup({
 				capabilities = capabilities,
 			})
-			lspconfig.html.setup({
+			vim.lsp.configs.html.setup({
 				capabilities = capabilities,
 			})
-			lspconfig.cssls.setup({
+			vim.lsp.configs.cssls.setup({
 				capabilities = capabilities,
 			})
-			lspconfig.ts_ls.setup({
+			vim.lsp.configs.ts_ls.setup({
 				capabilities = capabilities,
 			})
 
